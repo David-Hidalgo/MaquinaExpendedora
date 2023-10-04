@@ -1,51 +1,52 @@
+package me.walterserver.clases;
 import java.util.Hashtable;
+import java.util.Queue;
 
 public class MaquinaExpendedora {
-    protected class Tiquet {
-        private double precio;
-        private String producto;
 
-        public Tiquet(double precio, String producto) {
-            this.precio = precio;
-            this.producto = producto;
-        }
-
-        public double getPrecio() {
-            return precio;
-        }
-
-        public String getProducto() {
-            return producto;
-        }
-
-        public void setPrecio(double precio) {
-            this.precio = precio;
-        }
-
-        public void setProducto(String producto) {
-            this.producto = producto;
-        }
-    } 
+    /**
+     * @param args the command line arguments
+     */
     private double precio;
     private double saldo;
-    private Hashtable <char[], Integer> ventas;
+    private Hashtable <char[], Tiquet> ventas;
     private double total;
 
+
+    /**
+     * Constructor de la clase MaquinaExpendedora
+     * @param precioProducto
+     */
     public MaquinaExpendedora(double precioProducto) {
         precio = precioProducto;
         saldo = 0;
         total = 0;
-        ventas = new Hashtable <char[], Integer>();
+        ventas = new Hashtable <char[], Tiquet>();
     }
 
+
+    /**
+     * Devuelve el saldo de la maquina
+     * @return
+     */
     public double getSaldo() {
         return saldo;
     }
 
+
+    /**
+     * Devuelve el precio del producto
+     * @return
+     */
     public double getPrecio() {
         return precio;
     }
 
+
+    /**
+     * Modifica el precio del producto
+     * @param valor
+     */
     public void setPrecio(double valor) {
         precio = valor;
     }
