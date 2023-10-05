@@ -4,13 +4,17 @@ public class Tiquet {
     //Atributos
 
     private double precio;
-    private String producto;
+    private char[] tipo ={'a','b','c'};
 
     //Constructores
 
-    public Tiquet(double precio, String producto) {
+    public Tiquet() {
         this.precio = precio;
-        this.producto = producto;
+        this.tipo = tipo;
+    }
+    public Tiquet(double precio, char[] tipo) {
+        this.precio = precio;
+        this.tipo = tipo;
     }
 
     //Metodos
@@ -19,15 +23,15 @@ public class Tiquet {
         return precio;
     }
 
-    public String getProducto() {
-        return producto;
+    public char[] getProducto() {
+        return tipo;
     }
 
     public void setPrecio(double precio) {
         this.precio = precio;
     }
 
-    public void setProducto(String producto) {
-        this.producto = producto;
+    public void setProducto(char[] tipo) {
+        this.tipo = tipo;
     }
 }
